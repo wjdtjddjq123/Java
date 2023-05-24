@@ -1,5 +1,5 @@
 package Chap02;
-import java.util.Scanner;
+import java.util.Scanner; // 입력 모듈
 
 
 public class Ex02 {
