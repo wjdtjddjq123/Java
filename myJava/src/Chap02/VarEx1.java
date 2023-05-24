@@ -1,12 +1,16 @@
 package Chap02;
 
-public class VarEx1 {
+class VarEx1 {
 	public static void main(String[] args) {
-		int year = 0 ;
-		int age = 14;
+		int year = 0;
+		int age  = 14;
+		 
+		System.out.println(year);
+		System.out.println(age);
 
-		year = year +2000;
-		age = age + 1 ;
+		year = age + 2000;  // ���� age�� ���� 2000�� ���ؼ� ���� year�� ����
+		age  = age + 1;     // ���� age�� ����� ���� 1������Ų��.
+
 		System.out.println(year);
 		System.out.println(age);
 	}
