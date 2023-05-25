@@ -11,10 +11,10 @@ class PrintfEx2 {
 
 		System.out.printf("f1=%f, %e, %g%n", f1, f1, f1); // %f 실수출력
 		System.out.printf("f2=%f, %e, %g%n", f2, f2, f2); // %e 과학적 표기법으로 출력 
-		System.out.printf("f3=%f, %e, %g%n", f3, f3, f3); // %g
+		System.out.printf("f3=%f, %e, %g%n", f3, f3, f3); // %g 가장 이상적인 형태의 값으로 출력
 
-		System.out.printf("d=%f%n", d);
-		System.out.printf("d=%14.10f%n", d); // ��ü 14�ڸ� �� �Ҽ��� 10�ڸ�
+		System.out.printf("d=%f%n", d); // %값 반올림
+		System.out.printf("d=%14.10f%n", d); // 전체 14자리 중 소수점 10자리, d=  1.2345678900
 
 		System.out.printf("[12345678901234567890]%n");
 		System.out.printf("[%s]%n", url);

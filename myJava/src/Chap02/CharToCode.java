@@ -7,7 +7,7 @@ class CharToCode {
 
 		System.out.printf("%c=%d(%#X)%n", ch, code, code); 
 
-		char hch = 'a';     // char hch = 0xAC00;
+		char hch = '가';     // char hch = 0xAC00;
 		System.out.printf("%c=%d(%#X)%n", hch, (int)hch, (int)hch);
 	} 
 } 
