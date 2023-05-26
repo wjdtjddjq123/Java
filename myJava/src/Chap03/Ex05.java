@@ -12,6 +12,9 @@ public class Ex05 {
 		bResult = boo1 | boo2;			// | : Logical And Operator
 	
 		System.out.print("result: "+ result+", bResult: "+bResult);
+//		&&,|| : 첫번째 피연산자가 True 일 때 뒤에 피연산자를 확인 할 필요가X 
+//		& , | : 첫번째 피연산자가 True 일 때만 뒤에 피연산자를 확인 
+		
 		
 	}
 
