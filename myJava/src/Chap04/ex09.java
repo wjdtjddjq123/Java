@@ -32,5 +32,6 @@ public class Ex09 {
 		}
 		System.out.println("1 부터 100의 사이 홀수의 합은"+A+"입니다.");
 		System.out.println("1 부터 100의 사이 홀수의 합은"+B+"입니다.");
+		System.out.printf("짝수 %d와 홀수%d의 합은 %d 입니다.",A,B,A+B);
 	}
 }
