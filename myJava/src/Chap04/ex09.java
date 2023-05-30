@@ -1,37 +1,36 @@
-package Chap04;
-import java.util.Scanner;
+package chap04;
 
 
-/* ì‚¬ìš©ìì—ê²Œ ë…„ë„ë¥¼ ì…ë ¥ ë°›ì•„ ìœ¤ë…„ ì—¬ë¶€ë¥¼ íŒë‹¨í•˜ì—¬ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
-[ ê°€ìœ„ë°”ìœ„ë³´ ê²Œì„]
-1. ê°€ìœ„
-2. ë°”ìœ„
-3. ë³´
->>> 3
+public class Ex09 {
 
-ì‚¬ìš©ì ë³´, ì»´í“¨í„° ê°€ìœ„
-ê°€ìœ„ë°”ìœ„ë³´ ê²°ê³¼ ==? ì¡ŒìŠµë‹ˆë‹¤.
-=======================================
-[ ì½”ë“œì‘ì„± ì¡°ê±´ ]
-1. switchë¬¸ì„ ì´ìš©í•˜ì—¬ ë¬¸ì œë¥¼ í•´ê²°í•˜ì„¸ìš”.
-2. ifë¬¸ì„ ì´ìš©í•˜ì—¬ ë¬¸ì œë¥¼ í•´ê²°í•˜ì„¸ìš”.
-
-*/
-public class ex09 {
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("");
+	public static void main(String[] args) {		
+//	1ºÎÅÍ 100 »çÀÌÀÇ °ª Áß È¦¼öÀÇ ÇÕ°ú Â¦¼öÀÇ ÇÕÀ» µ¿½Ã¿¡ ±¸ÇÏ¿© ±× °á°ú¸¦ 
+//	Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
+		int A = 0,B = 0, C=0;
+//		for (int i =1;  i <= 100; i++) {
+//			if ( i % 2 != 0 ) {
+//				A+= i;
+//			}
+//			else {
+//				B += i;
+//			}
+//		}
+//		C =A+B;
+//		System.out.print("\n AÀÇ °ª:"+A);
+//		System.out.print("\n BÀÇ °ª:"+B);
+//		System.out.printf("\n %d+%d = %d",A,B,C);
+//		for (int i=1, j=1; i <= 100 && j <= 100; i++, j+=2 ) {
+//			A += i;
+//			B += j;
+//			C = A+B;
+//		}
+//		System.out.printf("%d+%d=%d",A,B,C);
 		
-		
-		int computer = (int)(Math.random()*3);		
-		int human = sc.nextInt();
-		
-		sc.close();
-		
-//		if (computer)
-		
-		
-		
+		for(int i =2, j=1; j<=100 && i<=100; i+=2, j+=2) {
+			A += i;
+			B += j;
+		}
+		System.out.println("1 ºÎÅÍ 100ÀÇ »çÀÌ È¦¼öÀÇ ÇÕÀº"+A+"ÀÔ´Ï´Ù.");
+		System.out.println("1 ºÎÅÍ 100ÀÇ »çÀÌ È¦¼öÀÇ ÇÕÀº"+B+"ÀÔ´Ï´Ù.");
 	}
 }
