@@ -1,5 +1,4 @@
 package Chap06;
-import java.util.Scanner;
 /*
 사용자에게 하나의 실수를 입력 받아 다음의 결과를 출력하는 코드를 작성하세요.
 단, 객체지향적으로
@@ -23,33 +22,24 @@ import java.util.Scanner;
   
 */
 public class exam01 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("하나의 실수를 입력하세요 :");
-		double num = sc.nextDouble();
-		exam01 a = new exam01();
-		
-		a.delArea(num);
-		a.douArea(num);
-		a.UpArea(num);
-	}
-	
+//	올리는 거
 	void UpArea (double a) {
-		System.out.println("올림:"+(int)a);
-//		올림
+		if(a == (int)a) {
+			System.out.print("올림: "+(int)a);
+		}else {
+			System.out.println("올림: "+((int)a+1));
+		}
 	}
+//	버리는 거
 	void delArea (double a) {
 		System.out.println("버림: "+(int)a);
-//		버림	
 	}
+//	반올림 하는 거
 	void douArea (double a) {
-		
 		if( a == (int)a) {
-			System.out.println("올림: "+((int)a));
+			System.out.println("반올림: "+((int)a));
 		}else {
-			System.out.println("반올림: "+((int)a+1));
+			System.out.println("반올림: "+((int)(0.5+a)));
 		}
-//		반올림
 	}
-	
 }
