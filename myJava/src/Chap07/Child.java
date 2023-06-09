@@ -1,7 +1,12 @@
 package Chap07;
 
 public class Child extends Parent {
-	Child(){
+	
+	String gender;
+	
+	Child(String name, String gender){
+		super(name);
+		this.gender = gender;
 		System.out.println("Child 인스턴스 생성");
 	}
 	void methodA() {

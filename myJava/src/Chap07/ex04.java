@@ -3,7 +3,9 @@ package Chap07;
 public class ex04 {
 
 	public static void main(String[] args) {
-		Child child = new Child();
+		Child child = new Child("¼ÕÈï¹Î","³²ÀÚ");
 		child.methodA();
+		
+		System.out.println(child.name+":"+child.gender);
 	}
 }

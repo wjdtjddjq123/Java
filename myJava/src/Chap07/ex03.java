@@ -10,13 +10,13 @@ public class ex03 {
 		cAccount.balance = 1000000;
 		
 		cAccount.deposit(500000);
-		System.out.println("현재잔액:"+cAccount.balance);
+		System.out.println("현재잔액 : "+cAccount.balance);
 		
 		if(cAccount.withdraw(10000000) == -1 ) {
 			System.out.println("잔액이부족합니다.");
-			System.out.println("현재잔액은"+cAccount.balance);
+			System.out.println("현재잔액은 : "+cAccount.balance);
 		}else {
-			System.out.println("현재잔액은"+cAccount.balance);
+			System.out.println("현재잔액은 : "+cAccount.balance);
 		}
 	}
 }
