@@ -1,16 +1,17 @@
-package Chap07;
+package chap07;
 
-public class ex02 {
+public class Ex02 {
 
 	public static void main(String[] args) {
-		ClassC ClassC = new ClassC();
-//		num1, num2, method1, method2 모두의 값과 결과를 확인하세요.
-		ClassC.method3();
-		System.out.println("num1:" + ClassC.num1);
-		System.out.println("num3:" + ClassC.num3);
-		System.out.println("method1:" + ClassC.method1());
-		System.out.println("method1:" + ClassC.method3());
-
+		
+		ClassC classC = new ClassC();
+		
+		// num1, num2, method1(), method2() 모두의 값과 결과를 확인하세요.
+		
+		System.out.println("num1: " + classC.num1);
+		System.out.println("num3: " + classC.num3);
+		System.out.println("method1() : " + classC.method1());
+		System.out.println("method3() : " + classC.method3());	
 	}
 
 }

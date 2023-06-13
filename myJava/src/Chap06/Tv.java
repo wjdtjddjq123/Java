@@ -1,7 +1,19 @@
-package Chap06;
+package chap06;
 
-public class Tv {
+class Tv {
+	
 	String color;
 	boolean isPower;
 	int channel;
+	
+	void setPower() {
+		isPower = !isPower;
+	}
+	void channelUp() {
+		channel++;
+	}
+	void channelDown() {
+		channel--;
+	}
+
 }

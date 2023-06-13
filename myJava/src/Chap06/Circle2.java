@@ -1,4 +1,4 @@
-package Chap06;
+package chap06;
 
 public class Circle2 {
 	static double pi = 3.141592;
@@ -10,8 +10,8 @@ public class Circle2 {
 	
 	double getArea() {
 		double area;
-		area = radius*radius*pi;
+		area = radius * radius * pi;
 		
 		return area;
-	}
+}
 }

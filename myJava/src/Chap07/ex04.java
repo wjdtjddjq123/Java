@@ -1,11 +1,11 @@
-package Chap07;
-/* ¿À¹ö¶óÀÌµù */
-public class ex04 {
+package chap07;
+
+public class Ex04 {
 
 	public static void main(String[] args) {
-		Child child = new Child("¼ÕÈï¹Î","³²ÀÚ");
+		Child child = new Child("¼ÕÈï¹Î", "³²ÀÚ");
 		child.methodA();
-		
-		System.out.println(child.name+":"+child.gender);
+		System.out.println(child.name + " : " + child.gender);
 	}
+
 }

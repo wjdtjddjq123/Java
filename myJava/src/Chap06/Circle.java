@@ -1,6 +1,7 @@
-package Chap06;
+package chap06;
 
 public class Circle {
+
 	double pi;
 	int radius;
 	
@@ -10,8 +11,9 @@ public class Circle {
 	
 	double getArea() {
 		double area;
-		area = radius*radius*pi;
+		area = radius * radius * pi;
 		
 		return area;
 	}
+
 }

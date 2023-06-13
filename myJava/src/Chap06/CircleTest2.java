@@ -1,23 +1,22 @@
-package Chap06;
+package chap06;
 
 public class CircleTest2 {
+
 	public static void main(String[] args) {
+		Circle c1, c2;
+		c1 = new Circle();
+		c2 = new Circle();
 		
-	System.out.println("Circle2.pi: "+Circle2.pi);
-	
-	Circle2 c1, c2;
-	c1 = new Circle2();
-	c2 = new Circle2();
-	
-	
-	System.out.println("c1.pi: "+c1.pi);
-//	레퍼런스를 이용해서 접근하는 것도 가능하지만 잘 안 될수도 있음 그래서 클래스변수는 클래스 이름을 이용해서 접근하는것이 맞음
-	System.out.println("c2.pi: "+c2.pi);
-	
-	c1.pi = 3.14; //Circle2.pi = 3.14;
-
-	System.out.println("c1.pi: "+c1.pi);
-	System.out.println("c2.pi: "+c2.pi);
-
+		System.out.println("c1] pi: " + c1.pi + ", radius: " + c1.radius + ", area: " + c1.getArea());
+		System.out.println("c2] pi: " + c2.pi + ", radius: " + c2.radius + ", area: " + c2.getArea());
+		
+		c1.setRadius(7);
+		c1.pi = 3.141592;
+		System.out.println("c1] pi: " + c1.pi + ", radius: " + c1.radius + ", area: " + c1.getArea() );
+		
+		c2.setRadius(7);
+		c2.pi = 3.14;
+		System.out.println("c2] pi: " + c2.pi + ", radius: " + c2.radius + ", area: " + c2.getArea() );
 	}
+
 }
