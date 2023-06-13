@@ -1,4 +1,4 @@
-package Chap06;
+package chap06;
 
 public class Car {
 	String color;
@@ -6,23 +6,28 @@ public class Car {
 	int door;
 	
 	Car(){
-		this.color = "black";
-		this.gearType = "auto";
-		this.door = 4;
+		color = "black";
+		gearType = "auto";
+		door = 4;
 	}
+	
 	Car(String color){
 		this.color = color;
-		this.gearType = "auto";
-		this.door = 4;
+		gearType = "auto";
+		door = 4;
 	}
-	Car(String gearType, String color){
+	
+	Car(String color, String gearType){
 		this.color = color;
 		this.gearType = gearType;
-		this.door = 4;
+		door = 4;
 	}
-	Car(String gearType, String color, int door){
+	
+	Car(String color, String gearType, int door){
 		this.color = color;
 		this.gearType = gearType;
 		this.door = door;
 	}
+	
+	
 }

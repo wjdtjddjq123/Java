@@ -1,4 +1,4 @@
-package Chap07;
+package chap07;
 
 public class Account {
 	String accountNo;
@@ -6,14 +6,14 @@ public class Account {
 	int balance;
 	
 	void deposit(int amount) {
-//		ют╠щ
 		balance += amount;
 	}
 	
 	int withdraw(int amount) {
-		if(amount > balance) {
+		if(amount>balance) {
 			amount = -1;
-		}else {
+		}
+		else {
 			balance -= amount;
 		}
 		return amount;

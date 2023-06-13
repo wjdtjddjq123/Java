@@ -1,10 +1,14 @@
-package Chap06;
-/* 오버로딩 */
-public class ex13 {
+package chap06;
+
+public class Ex13 {
+
+	int num1 = 10;
+	int num2 = num1;
+	
+	
 	public static void main(String[] args) {
 		
-		int num2;
-		int num1;
+
 	}
+
 }
-	

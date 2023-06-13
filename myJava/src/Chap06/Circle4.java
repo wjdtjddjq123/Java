@@ -1,22 +1,20 @@
-package Chap06;
+package chap06;
 
 public class Circle4 {
-	
+	//static double pi = 3.14; 이렇게 하지말것
 	static double pi;
 	int radius;
 	
-	static{
-//		초기화 Block, 클래스가 실행되어질 때 자동으로 초기화 시키는문
-		pi = 3.141592;
+	static {
+		Circle4.pi = 3.141592; // 초기화블럭, 클래스가 로드 될 때, 딱 한번만 실행
 	}
 	
 	Circle4(){
-//	Circle4.pi = 3.141592;
-//	
+		// Circle4.pi = 3.141592; 이렇게 하지말것.
 	}
 	
-	static void setPi(double p) {
-		Circle4.pi = p;
+	static void setPi(double pi) {
+		Circle4.pi = pi;
 	}
 	
 	void setRadius(int rad) {
@@ -25,8 +23,8 @@ public class Circle4 {
 	
 	double getArea() {
 		double area;
-		area = radius*radius*Circle4.pi;
+		area = radius * radius * Circle4.pi;
 		
 		return area;
-	}
+		}
 }
