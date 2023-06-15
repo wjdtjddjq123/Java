@@ -6,7 +6,7 @@ public class Ex05 {
 		Circle C = new Circle(7);
 		
 		System.out.println("Circle"+C.getAre());
-		System.out.println("Circle"+C.PI);
+		System.out.println("Circle"+Circle.PI);
 //		C.PI = 3.14;
 //		C.radius = 5 ;
 		

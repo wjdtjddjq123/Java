@@ -1,18 +1,25 @@
 package chap07;
 
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
 //import java.lang.reflect.Array;
 
+
 /*
- * ´ÙÀ½ ¹è¿­À» ÀÌ¿ëÇÏ¿© Áßº¹µÇÁö ¾Ê´Â ·Î¶Ç ¹øÈ£ 6°³¸¦ »ı¼ºÇÏ¿© Å©±â ¼ø¼­´ë·Î Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
- * ´Ü, °´Ã¼ÁöÇâÀûÀ¸·Î ÄÚµå¸¦ ÀÛ¼ºÇÏ¿©¾ß ÇÕ´Ï´Ù.
+ * ë‹¤ìŒ ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ì¤‘ë³µë˜ì§€ ì•ŠëŠ” ë¡œë˜ ë²ˆí˜¸ 6ê°œë¥¼ ìƒì„±í•˜ì—¬ í¬ê¸° ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+ * ë‹¨, ê°ì²´ì§€í–¥ì ìœ¼ë¡œ ì½”ë“œë¥¼ ì‘ì„±í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.
  * 
  * int [] lotto = new int[6];
  * */
 public class exam02 {
 	public static void main(String[] args) {
+
+		exam02_Class lotto = new exam02_Class();
+	
+		System.out.printf("ë¡œë˜ë²ˆí˜¸ : %s",lotto.toString());
+
 		int lotto [] = new int[6];
 		for(int i=0; i<lotto.length; i++) {
 			lotto[i] = (int)((Math.random()*45)+1);
