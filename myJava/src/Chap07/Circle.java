@@ -11,7 +11,7 @@ public class Circle {
 	}
 	double getAre() {
 		final double result;
-		result = this.radius*radius*this.PI; 
+		result = this.radius*radius*Circle.PI; 
 		return result;
 	}
 }
