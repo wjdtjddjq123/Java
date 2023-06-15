@@ -1,14 +1,14 @@
-package Chap07;
+package chap07;
 
 public class ClassA {
-	int num1; 
+
+	int num1;
 	
-	ClassA(){
+	ClassA() {
 		this.num1 = 10;
-	
 	}
+	
 	String method1() {
-		return "classA 클래스의 method1 입니다. ";
-		
+		return "ClassA 클래스의 method1() 입니다. ";
 	}
 }

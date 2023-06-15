@@ -6,22 +6,26 @@ public class exam01_Class {
 	int month;
 	int day;
 	
-	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// °¢ ¿ùÀÇ ÀÏ¼ö
-	String [] week = {"ÀÏ", "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä"};	
+	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// ê° ì›”ì˜ ì¼ìˆ˜
+	String [] week = {"ì¼", "ì›”", "í™”", "ìˆ˜", "ëª©", "ê¸ˆ", "í† "};	
 	
+
 	int gettotalDays (int num) {
+
+	int totalDays (int num) {
+
 		for(int i = 1; i < year; i++) {
-			// À±³â, Æò³â °è»ê ¾Ë°í¸®Áò
+			// ìœ¤ë…„, í‰ë…„ ê³„ì‚° ì•Œê³ ë¦¬ì¦˜
 			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-				// À±³â
+				// ìœ¤ë…„
 				num += 366;
 			}
 			else {
-				// Æò³â
+				// í‰ë…„
 				num += 365;
 			}
 		}
-		// ÇØ´ç ³âµµ ÀÌÀü ´Ş±îÁöÀÇ ÀÏ ¼ö ´õÇÏ±â
+		// í•´ë‹¹ ë…„ë„ ì´ì „ ë‹¬ê¹Œì§€ì˜ ì¼ ìˆ˜ ë”í•˜ê¸°
 		for(int j = 1; j < month; j++) {
 			if(month == 2 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
 					monthLastDays[2] = 29;
@@ -38,12 +42,15 @@ public class exam01_Class {
 		this.day = day;
 		
 		
-		System.out.printf("%d³â %d¿ù %dÀÏÀº %s¿äÀÏÀÔ´Ï´Ù.", year,month,day,week[gettotalDays(day)%7]);
-	}
-	
+
+		System.out.printf("%dë…„ %dì›” %dì¼ì€ %sìš”ì¼ì…ë‹ˆë‹¤.", year,month,day,week[gettotalDays(day)%7]);
+		System.out.printf("%dë…„ %dì›” %dì¼ì€ %sìš”ì¼ì…ë‹ˆë‹¤.", year,month,day,week[totalDays(day)%7]);
+}	
+
+
 //	void days() {
 //		int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-//		// -1Àº »ç¿ëÇÏÁö ¾Ê°Ú´Ù¶ó´Â ÀÇ¹Ì. index°¡ °¢ ¿ùÀ» ¶æÇÏ°Ô ÇÏ·Á°í ³ÖÀ½. monthLastDays[1] = 1¿ù .... monthLastDays[12] = 12¿ù
+//		// -1ì€ ì‚¬ìš©í•˜ì§€ ì•Šê² ë‹¤ë¼ëŠ” ì˜ë¯¸. indexê°€ ê° ì›”ì„ ëœ»í•˜ê²Œ í•˜ë ¤ê³  ë„£ìŒ. monthLastDays[1] = 1ì›” .... monthLastDays[12] = 12ì›”
 //		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
 //			monthLastDays[2] = 29;
 //		}

@@ -1,12 +1,14 @@
-package Chap07;
+package chap07;
 
 public class ClassC extends ClassA {
-	int num3; 
 	
-	ClassC(){
-		this.num3 = 30;
+	int num3;
+
+	ClassC() {
+		this.num3 = 20;		
 	}
+	
 	String method3() {
-		return "classC 클래스의 method3 입니다. ";
+		return "ClassC 클래스의 method3() 입니다. ";
 	}
 }

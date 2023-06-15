@@ -1,17 +1,20 @@
-package Chap06;
+package chap06;
 
 public class CircleTest {
-	double pi = 3.141592;
-	int radius;
-	
-	void setRadius(int rad) {
-		radius = rad;
-	}
-	
-	double getArea() {
-		double area;
-		area = radius*radius*pi;
+
+	public static void main(String[] args) {
+		Circle circle;
+		circle = new Circle();
+		circle.pi = 3.141592;
 		
-		return area;
+		circle.setRadius(5);
+		
+		System.out.printf("반지름이 5인 원의 넓이는 %.2f 입니다.\n", circle.getArea());
+
+		
+		circle.setRadius(7);
+		
+		System.out.printf("반지름이 7인 원의 넓이는 %.2f 입니다.\n", circle.getArea());
 	}
+
 }

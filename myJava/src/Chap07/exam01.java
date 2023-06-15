@@ -7,7 +7,7 @@ public class exam01 {
 		exam01_Class cleandal = new exam01_Class();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("³â, ¿ù, ÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("Â³Ã¢, Â¿Ã¹, Ã€ÃÃ€Â» Ã€Ã”Â·Ã‚Ã‡ÃÂ¼Â¼Â¿Ã¤:");
 		int year,month,day;
 
 		year = cleandal.year = sc.nextInt();
@@ -17,8 +17,11 @@ public class exam01 {
 		
 		
 		cleandal.claender(year, month, day);
+
 		cleandal.gettotalDays(day);
-		
+
+		cleandal.totalDays(day);
+
 		
 		
 		

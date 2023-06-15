@@ -1,6 +1,7 @@
-package Chap06;
+package chap06;
 
 public class Time {
+
 	int hour;
 	int minute;
 	int second;
@@ -8,16 +9,13 @@ public class Time {
 	void setHour(int h) {
 		hour = h;
 	}
-	
 	void setMinute(int m) {
 		minute = m;
 	}
-	
-	void setSecond( int s ) {
-		second = s;
+	void setSecond(int s) {
+		second = s;	
 	}
-	
 	String currentTime() {
-		return hour + "시 " + minute + "분 " + second + "초";
+		return hour + "시 " + minute + "분 " + second + "초 ";
 	}
 }
