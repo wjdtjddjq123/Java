@@ -3,6 +3,7 @@ package chap07.packageB;
 import chap07.packageA.Parent;
 
 public class Child extends Parent {
+
 	int result;
 	
 	public Child(int num1, int num2, int num3, int num4){
@@ -11,11 +12,15 @@ public class Child extends Parent {
 	
 	public int getResult1() {
 			this.result = this.num3+this.num4;
-//			deafault num2´Â ÀÚ±â ÆĞÅ°Áö ¾È¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖÀ½ ±×·¡¼­ »ç¿ë ¾È µÊ
-//			ProtenctedÀÇ num3´Â ÀÚ½Ä ÆĞÅ°Áö¿¡¼­ »ç¿ëÇÒ ¼ö ÀÖÀ½
+//			deafault num2ëŠ” ìê¸° íŒ¨í‚¤ì§€ ì•ˆì—ì„œë§Œ ì‚¬ìš©í•  ìˆ˜ ìˆìŒ ê·¸ë˜ì„œ ì‚¬ìš© ì•ˆ ë¨
+//			Protenctedì˜ num3ëŠ” ìì‹ íŒ¨í‚¤ì§€ì—ì„œ ì‚¬ìš©í•  ìˆ˜ ìˆìŒ
 			
 			this.result += this.getNum1();
 			this.result += this.getNum2();
 			return this.result;
 	}
+
 }
+
+}
+
