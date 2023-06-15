@@ -1,4 +1,5 @@
 package chap07;
+
 public class exam02_Class {
 	
 	private int lotto [] ;
@@ -8,7 +9,7 @@ public class exam02_Class {
 		this.setLotto();
 		this.sortLotto();
 	}
-//	·Î¶Ç ¹øÈ£ Áßº¹ °Ë»ç ¸Þ¼­µå
+//	ï¿½Î¶ï¿½ ï¿½ï¿½È£ ï¿½ßºï¿½ ï¿½Ë»ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	boolean isUnique(int num) {
 		boolean result = true ;
 		
@@ -20,15 +21,15 @@ public class exam02_Class {
 		}
 		return result;
 	}
-//	·Î¶Ç¹è¿­ ÃÊ±âÈ­ ¸Þ¼­µå
+//	ï¿½Î¶Ç¹è¿­ ï¿½Ê±ï¿½È­ ï¿½Þ¼ï¿½ï¿½ï¿½
 	void setLotto() {
 		int temp;
 		for(int i=0; i<this.lotto.length;) {
-//	¿©±â¼­ i¸¦ Áõ°¡½ÃÅ°´Â °ÍÀÌ ¾Æ´Ï¶ó Áßº¹°Ë»ç¸¦ ÇÒ ‹š i¸¦ Áõ°¡½ÃÅ²´Ù.
+//	ï¿½ï¿½ï¿½â¼­ iï¿½ï¿½ ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ ï¿½ßºï¿½ï¿½Ë»ç¸¦ ï¿½ï¿½ ï¿½ï¿½ iï¿½ï¿½ ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
 			while(true) {
 				temp = (int)(Math.random()*45)+1;
 				if(this.isUnique(temp)) {
-//	À¯ÀÏÇÑ ¹øÈ£¸¦ »ý¼ºÇÑ ÀÌ ºÎºÐ¿¡¼­ i °ªÀ» Áõ°¡½ÃÄÑÁÖ¾î¾ßÇÑ´Ù.
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ÎºÐ¿ï¿½ï¿½ï¿½ i ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ñ´ï¿½.
 					lotto[i]=temp;
 					i++;
 					break;
@@ -36,7 +37,7 @@ public class exam02_Class {
 			}
 		}
 	}
-//	¹è¿­Á¤·Ä
+//	ï¿½è¿­ï¿½ï¿½ï¿½
 	void sortLotto() {
 		int temp;
 		for(int i=0; i<this.lotto.length-1;i++) {
@@ -61,4 +62,27 @@ public class exam02_Class {
 		}
 		return result;
 	}
+=======
+import java.util.Arrays;
+public class exam02_Class {
+	private int lotto [] = new int[6];
+	
+	
+	void lottocheck() {
+		for(int i=0; i<lotto.length; i++) {
+			lotto[i] = (int)((Math.random()*45)+1);
+			i++;
+			if(i != 0) {
+				for(int j=0; j<i; j++) {
+					if(lotto[i]==lotto[j]) {
+						i--;
+						break;
+					}
+				}
+			}
+		}Arrays.sort(lotto);
+	}
+	
+	
+	
 }

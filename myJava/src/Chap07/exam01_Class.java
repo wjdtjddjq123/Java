@@ -5,24 +5,30 @@ public class exam01_Class {
 	private int year;
 	private int month;
 	private int day;
+
+	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½
+
+	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// ê° ì›”ì˜ ì¼ìˆ˜
+	String [] week = {"ì¼", "ì›”", "í™”", "ìˆ˜", "ëª©", "ê¸ˆ", "í† "};	
+
 	
-<<<<<<< Updated upstream
-	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// °¢ ¿ùÀÇ ÀÏ¼ö
-	String [] week = {"ÀÏ", "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä"};	
-	
+
+	int gettotalDays (int num) {
+
 	int totalDays (int num) {
+
 		for(int i = 1; i < year; i++) {
-			// À±³â, Æò³â °è»ê ¾Ë°í¸®Áò
+			// ìœ¤ë…„, í‰ë…„ ê³„ì‚° ì•Œê³ ë¦¬ì¦˜
 			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-				// À±³â
+				// ìœ¤ë…„
 				num += 366;
 			}
 			else {
-				// Æò³â
+				// í‰ë…„
 				num += 365;
 			}
 		}
-		// ÇØ´ç ³âµµ ÀÌÀü ´Ş±îÁöÀÇ ÀÏ ¼ö ´õÇÏ±â
+		// í•´ë‹¹ ë…„ë„ ì´ì „ ë‹¬ê¹Œì§€ì˜ ì¼ ìˆ˜ ë”í•˜ê¸°
 		for(int j = 1; j < month; j++) {
 			if(month == 2 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
 					monthLastDays[2] = 29;
@@ -38,17 +44,17 @@ public class exam01_Class {
 		this.month = month;
 		this.day = day;
 		
-		
-		System.out.printf("%d³â %d¿ù %dÀÏÀº %s¿äÀÏÀÔ´Ï´Ù.", year,month,day,week[totalDays(day)%7]);
-=======
+
+		System.out.printf("%dï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ï¿½ %sï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.", year,month,day,week[totalDays(day)%7]);
+
 	exam01_Class (int year, int month, int day){
 		this.year = year;
 		this.month = month;
 		this.day = day;
->>>>>>> Stashed changes
+
 	}
 	
-//	À±³â¿©ºÎ ÆÇ´Ü¸Ş¼­µå
+//	ï¿½ï¿½â¿©ï¿½ï¿½ ï¿½Ç´Ü¸Ş¼ï¿½ï¿½ï¿½
 	private boolean isleapYear() {
 		return this.isleapYear(this.day);
 	}
@@ -60,7 +66,7 @@ public class exam01_Class {
 		}
 	return result;
 	}
-//	°¢¿ùÀÇ ¸¶Áö¸· ÀÏÀÚ¸¦ ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½
 	private int getMountLastday(int month) {
 		int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		if(this.isleapYear()) {
@@ -68,7 +74,7 @@ public class exam01_Class {
 		}
 		return monthLastDays[month];
 	}
-//	¼­±â 1³â 1¿ù 1ÀÏºÎÅÍ »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ³¯Â¥ ±îÁöÀÇ ÀüÃ¼ ÃÑ ÀÏ¼ö ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
+//	ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ 1ï¿½ï¿½ 1ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ ï¿½Ï¼ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½
 	private int gettoaldays() {
 		int total = 0;
 		for(int i=1; i<this.year; i++) {
@@ -85,30 +91,43 @@ public class exam01_Class {
 		return total;
 	}
 	
-//	¿äÀÏÀ» ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
+//	ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½
 	String getDayOfWeek() {
-		String [] week = {"ÀÏ", "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä"};
+		String [] week = {"ï¿½ï¿½", "ï¿½ï¿½", "È­", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½"};
 		
 		return week[this.gettoaldays()%7];
 	}
 	
 	
-//	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// °¢ ¿ùÀÇ ÀÏ¼ö
-//	String [] week = {"ÀÏ", "¿ù", "È­", "¼ö", "¸ñ", "±İ", "Åä"};	
+//	int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½
+//	String [] week = {"ï¿½ï¿½", "ï¿½ï¿½", "È­", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½"};	
 //	
 //	int gettotalDays (int num) {
 //		for(int i = 1; i < year; i++) {
-//			// À±³â, Æò³â °è»ê ¾Ë°í¸®Áò
+//			// ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ë°ï¿½ï¿½ï¿½
 //			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-//				// À±³â
+//				// ï¿½ï¿½ï¿½
 //				num += 366;
 //			}
 //			else {
-//				// Æò³â
+//				// ï¿½ï¿½ï¿½
 //				num += 365;
 //			}
+
+
+		System.out.printf("%dë…„ %dì›” %dì¼ì€ %sìš”ì¼ì…ë‹ˆë‹¤.", year,month,day,week[gettotalDays(day)%7]);
+		System.out.printf("%dë…„ %dì›” %dì¼ì€ %sìš”ì¼ì…ë‹ˆë‹¤.", year,month,day,week[totalDays(day)%7]);
+}	
+
+
+//	void days() {
+//		int [] monthLastDays = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+//		// -1ì€ ì‚¬ìš©í•˜ì§€ ì•Šê² ë‹¤ë¼ëŠ” ì˜ë¯¸. indexê°€ ê° ì›”ì„ ëœ»í•˜ê²Œ í•˜ë ¤ê³  ë„£ìŒ. monthLastDays[1] = 1ì›” .... monthLastDays[12] = 12ì›”
+//		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+//			monthLastDays[2] = 29;
+
 //		}
-//		// ÇØ´ç ³âµµ ÀÌÀü ´Ş±îÁöÀÇ ÀÏ ¼ö ´õÇÏ±â
+//		// ï¿½Ø´ï¿½ ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 //		for(int j = 1; j < month; j++) {
 //			if(month == 2 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
 //					monthLastDays[2] = 29;
@@ -123,6 +142,6 @@ public class exam01_Class {
 //		this.year = year;
 //		this.month = month;
 //		this.day = day;
-//		System.out.printf("%d³â %d¿ù %dÀÏÀº %s¿äÀÏÀÔ´Ï´Ù.", year,month,day,week[gettotalDays(day)%7]);
+//		System.out.printf("%dï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ï¿½ %sï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.", year,month,day,week[gettotalDays(day)%7]);
 //	}
 }

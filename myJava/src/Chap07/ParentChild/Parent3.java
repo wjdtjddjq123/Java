@@ -5,6 +5,11 @@ public class Parent3 {
 	Parent3(){
 		num = 1234;
 	}
+	
+	Parent3(){
+		num = 1234;
+	}
+
 	void methodA() {
 		System.out.println("Parent3 MethodA");
 	}

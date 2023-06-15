@@ -5,10 +5,22 @@ import chap07.packageB.Child;
 public class Ex06 {
 
 	public static void main(String[] args) {
-//		chap07.packageB.child Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸£ 
-//		»ı¼ºÇÏ°í result°ªÀ» Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
-//		¸¸¾à, ¾ÈµÈ´Ù¸é ¹®Á¦°¡ ¹«¾ùÀÎÁö Ã£°í °¡Àå Á¦ÇÑÀûÀÎ ¹æ¹ıÀ¸·Î ±× ¹®Á¦¸¦ ÇØ°áÇÏ¼¼¿ä.
+
+		
+		
+		 Child child = new Child(10,20,30,40);
+		 System.out.println("result: " + child.getResult1());
+//		chap07.packageB.child í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥´ 
+//		ìƒì„±í•˜ê³  resultê°’ì„ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+//		ë§Œì•½, ì•ˆëœë‹¤ë©´ ë¬¸ì œê°€ ë¬´ì—‡ì¸ì§€ ì°¾ê³  ê°€ì¥ ì œí•œì ì¸ ë°©ë²•ìœ¼ë¡œ ê·¸ ë¬¸ì œë¥¼ í•´ê²°í•˜ì„¸ìš”.
+//		Child child = new Child(1,2,3,4);
+//		System.out.println("child : "+child.getResult1());	
+
+//		chap07.packageB.child í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥´ 
+//		ìƒì„±í•˜ê³  resultê°’ì„ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”.
+//		ë§Œì•½, ì•ˆëœë‹¤ë©´ ë¬¸ì œê°€ ë¬´ì—‡ì¸ì§€ ì°¾ê³  ê°€ì¥ ì œí•œì ì¸ ë°©ë²•ìœ¼ë¡œ ê·¸ ë¬¸ì œë¥¼ í•´ê²°í•˜ì„¸ìš”.
 		Child child = new Child(1,2,3,4);
 		System.out.println("child : "+child.getResult1());	
+
 	}
 }

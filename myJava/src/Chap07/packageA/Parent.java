@@ -1,7 +1,7 @@
 package chap07.packageA;
 
 public class Parent {
-	
+
 	private int num1;
 	int num2;
 	protected int num3;
@@ -22,3 +22,6 @@ public class Parent {
 		return this.num2;
 	}
 }
+
+}
+

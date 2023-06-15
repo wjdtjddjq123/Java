@@ -4,10 +4,19 @@ public class exam01 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+
 		exam01_Class cleandal;
 		int year, month, day;
 		
-		System.out.println("³â, ¿ù, ÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ï¿½ï¿½, ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½:");
+
+		System.out.println("Â³Ã¢, Â¿Ã¹, Ã€ÃÃ€Â» Ã€Ã”Â·Ã‚Ã‡ÃÂ¼Â¼Â¿Ã¤:");
+		int year,month,day;
+
+		year = cleandal.year = sc.nextInt();
+		month = cleandal.month = sc.nextInt();
+		day = cleandal.day = sc.nextInt();
+
 
 		year = sc.nextInt();
 		month = sc.nextInt();
@@ -15,17 +24,19 @@ public class exam01 {
 		
 		cleandal = new exam01_Class(year, month, day);
 		
-<<<<<<< Updated upstream
+
 		cleandal.claender(year, month, day);
+
+		cleandal.gettotalDays(day);
+
 		cleandal.totalDays(day);
+
 		
 		
-		
-=======
+
 		sc.close();
->>>>>>> Stashed changes
 		
-		System.out.printf("ÀÔ·ÂÇÏ½Å %d³â %d¿ù %dÀÏÀº %s¿äÀÏ ÀÔ´Ï´Ù.", 
+		System.out.printf("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ %dï¿½ï¿½ï¿½ %sï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.", 
 				year,month,day,cleandal.getDayOfWeek());
 	}
 }
